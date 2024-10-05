@@ -12,10 +12,11 @@ MCTS的基本步骤包括：
 模拟（Simulation）：从新添加的子节点开始，进行随机模拟（也称为“playout”或“rollout”），直到游戏结束。
 
 反向传播（Backpropagation）：将模拟的结果更新到路径上的所有节点。
+### UCT
+<img width="372" alt="截屏2024-10-05 21 02 44" src="https://github.com/user-attachments/assets/71d4e094-f967-4776-9222-c49d87ee3ab5">
 
 ## 井字棋例子tic-tac-toe
 ```python
-
 import random
 import numpy as np
 
@@ -106,10 +107,11 @@ class Node:
         return f"Node with state:\n{self.game_state}\nWins: {self.wins}\nVisits: {self.visits}"
 
 
-def mcts(root_state, iterations=2000):
+def mcts(root_state, iterations=1000):
+    random.seed(42)  # 设置随机数种子
     root_node = Node(root_state)
 
-    intermediate_log_file = open('mcts_intermediate_log1.txt', 'w')
+    intermediate_log_file = open('mcts_intermediate_log.txt', 'w')
     winning_log_file = open('mcts_winning_log.txt', 'w')
 
     total_simulations = 0
@@ -213,6 +215,19 @@ print(f"Total simulations: {total_sim}")
 print(f"Winning simulations: {winning_sim}")
 print(f"X wins: {x_win_count}")
 print(f"O wins: {o_win_count}")
-
 ```
+## 拓展议题
 
+模拟轮次是1000的时候：
+Total simulations: 1000
+Winning simulations: 877
+X wins: 587
+O wins: 290
+
+模拟轮次是2000的时候：
+Total simulations: 2000
+Winning simulations: 1722
+X wins: 1191
+O wins: 531
+
+模拟轮次是1000的时候，中间结果mcts_intermediate_log.txt 150+MB；模拟轮次是2000的时候，中间结果mcts_intermediate_log.txt 650+MB，为啥中间结果不是两倍增长？
