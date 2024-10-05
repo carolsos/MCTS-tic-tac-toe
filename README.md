@@ -12,7 +12,9 @@ MCTS的基本步骤包括：
 模拟（Simulation）：从新添加的子节点开始，进行随机模拟（也称为“playout”或“rollout”），直到游戏结束。
 
 反向传播（Backpropagation）：将模拟的结果更新到路径上的所有节点。
-### UCT
+
+### UCT分数
+UCT（Upper Confidence Bound applied to Trees）分数是一种用于在蒙特卡洛树搜索中平衡探索和利用的策略。
 <img width="372" alt="截屏2024-10-05 21 02 44" src="https://github.com/user-attachments/assets/71d4e094-f967-4776-9222-c49d87ee3ab5">
 
 ## 井字棋例子tic-tac-toe
