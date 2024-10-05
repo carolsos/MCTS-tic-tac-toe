@@ -18,6 +18,7 @@ UCT（Upper Confidence Bound applied to Trees）分数是一种用于在蒙特�
 <img width="372" alt="截屏2024-10-05 21 02 44" src="https://github.com/user-attachments/assets/71d4e094-f967-4776-9222-c49d87ee3ab5">
 
 ## 井字棋例子tic-tac-toe
+seed设置为42
 ```python
 import random
 import numpy as np
