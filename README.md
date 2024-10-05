@@ -223,9 +223,9 @@ print(f"O wins: {o_win_count}")
 
 模拟轮次是1000的时候：
 Total simulations: 1000
-Winning simulations: 877
-X wins: 587
-O wins: 290
+Winning simulations: 868
+X wins: 596
+O wins: 272
 
 模拟轮次是2000的时候：
 Total simulations: 2000
@@ -233,4 +233,4 @@ Winning simulations: 1722
 X wins: 1191
 O wins: 531
 
-模拟轮次是1000的时候，中间结果mcts_intermediate_log.txt 150+MB；模拟轮次是2000的时候，中间结果mcts_intermediate_log.txt 650+MB，为啥中间结果不是两倍增长？
+模拟轮次是1000的时候，中间结果mcts_intermediate_log.txt 156.34MB；模拟轮次是2000的时候，中间结果mcts_intermediate_log.txt 650+MB，为啥中间结果不是两倍增长？
