@@ -229,8 +229,8 @@ O wins: 272
 
 模拟轮次是2000的时候：
 Total simulations: 2000
-Winning simulations: 1722
-X wins: 1191
-O wins: 531
+Winning simulations: 1763
+X wins: 1197
+O wins: 566
 
-模拟轮次是1000的时候，中间结果mcts_intermediate_log.txt 156.34MB；模拟轮次是2000的时候，中间结果mcts_intermediate_log.txt 650+MB，为啥中间结果不是两倍增长？
+模拟轮次是1000的时候，中间结果mcts_intermediate_log.txt 156.34MB；模拟轮次是2000的时候，中间结果mcts_intermediate_log.txt 623.99MB，为啥中间结果不是两倍增长？
